@@ -8,7 +8,7 @@ Use the output mailfile from Mailplanner & run a python script that will map uni
 
 Set your enviroment to the "data-team" directory
 ```
-cd ~repo/matchbacks
+cd ~/repos/matchbacks
 ```
 Run the script "city_holdout_file.py" followed by two parameters:
 
