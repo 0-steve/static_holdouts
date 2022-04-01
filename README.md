@@ -10,7 +10,7 @@ Set your enviroment to the "data-team" directory
 ```
 cd ~/repos/data-team
 ```
-Run the script "city_holdout_file.py" followed by two parameters:
+Run the script "city_holdout.py" followed by two parameters:
 
 ```
 Parameter 1: path to the mailfile that was downloaded from Mailplanner
