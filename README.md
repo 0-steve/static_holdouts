@@ -29,7 +29,7 @@ Parameter 2: path to CLIENT_READY static holdouts directory
 ```
 Full script ex:
 ```
-python3 city_holdouts.py {path to mailfile} {path to static holdouts}
+python3 city_holdouts.py {path to mailfile} {path to static holdouts} ;
 ```
 
 ## Outputs
