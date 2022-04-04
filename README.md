@@ -7,7 +7,9 @@ Use the output mailfile from Mailplanner & run a python script that will map uni
 ## Steps
 Git clone & create your environment
 ```
-cd ~/repos/data-team git clone https://github.com/0-steve/static_holdouts.git
+cd ~/repos/data-team 
+
+git clone https://github.com/0-steve/static_holdouts.git
 ```
 
 Set your path to the "data-team" directory
