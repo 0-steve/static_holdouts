@@ -6,12 +6,19 @@ Use the output mailfile from Mailplanner & run a python script that will map uni
 
 ## Steps
 Set your path to the "data-team" directory & create your environment (only need to do this once)
-<br> <i>-git pull to update*</i>
 
 ```
 cd ~/repos/data-team 
 
 git clone https://github.com/0-steve/static_holdouts.git
+```
+
+Once cloned, set your path to the "static_holdouts" directory & update your environment
+
+```
+cd ~/repos/data-team/static_holdouts
+
+git pull
 ```
 
 Run the script "city_holdouts.py" followed by two parameters:
@@ -22,7 +29,7 @@ Parameter 2: path to CLIENT_READY static holdouts directory
 ```
 Full script ex:
 ```
-python3 static_holdouts/city_holdouts.py {path to mailfile} {path to static holdouts}
+python3 city_holdouts.py {path to mailfile} {path to static holdouts}
 ```
 
 ## Outputs
