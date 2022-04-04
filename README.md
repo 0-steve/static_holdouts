@@ -6,8 +6,8 @@ Use the output mailfile from Mailplanner & run a python script that will map uni
 
 ## Steps
 Git clone & create your environment
--Only need to do this once
--Use git pull to update
+<br> -Only need to do this once
+<br> -Use git pull to update
 
 ```
 cd ~/repos/data-team 
