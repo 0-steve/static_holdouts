@@ -42,6 +42,7 @@ mint_mobile_2022-02-24_cities
 ```
 <br>
 <br>Example file output names:
+
 ```
 mint_mobile_2022-02-24_cities_StaticHoldouts.csv
 mint_mobile_2022-02-24_cities_StaticHoldouts_Summary.csv
