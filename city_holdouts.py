@@ -84,9 +84,8 @@ def holdout_checks(mail_file_df, misc_df):
             print("")
     else:
         for x in mailfile_id & mapped_id:
-            for x in mailfile_id ^ mapped_id:
-                        print(f"Market ID '{x}' mapped")
-                        print("")
+            print(f"Market ID '{x}' mapped")
+            print("")
 
 def make_name(path):
     path = path.lower()
