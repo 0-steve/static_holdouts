@@ -68,16 +68,25 @@ def holdout_summary(df_lst, file_lst):
 
     return concated_df
 
-def holdout_checks(final_df, holdout_df):
-    holdout_counts = final_df.groupby(["Listcode", "originalFileName"]).size().reset_index(name="record_count")
-    holdout_join = holdout_counts.merge(holdout_df, on=["Listcode", "originalFileName"], how="left")
-    if holdout_join.quantity.equals(holdout_join.record_count):
-        print("Holdout counts match")
-        print("")
+def holdout_checks(mail_file_df, misc_df):
+    mailfile_id = parse_mailfile(mail_file_df)
+    mailfile_id = set(mailfile_id)
+    mapped_id = get_holdout_id(mail_file_df, misc_df)
+    mapped_id = set(mapped_id.marketID)
+    if mailfile_id ^ mapped_id:
+        not_mapped = mailfile_id ^ mapped_id
+        mapped = mailfile_id & mapped_id
+        for x in not_mapped:
+            print(f"Market ID '{x}' did not map!!!")
+            print("")
+        for x in mapped:
+            print(f"Market ID {x} mapped")
+            print("")
     else:
-        print("Holdout counts are off!!")
-        return holdout_join
-        print("") 
+        for x in mailfile_id & mapped_id:
+            for x in mailfile_id ^ mapped_id:
+                        print(f"Market ID '{x}' mapped")
+                        print("")
 
 def make_name(path):
     path = path.lower()
@@ -111,7 +120,7 @@ if __name__ == '__main__':
 
     name = make_name(args.mail_file)
 
-    holdout_checks(holdout_final_df, holdout_df) # if fail then stop
+    holdout_checks(mail_file_df, misc_df)
 
     os.mkdir(f"/private/tmp/{name}") 
     os.chdir(f"/private/tmp/{name}")
