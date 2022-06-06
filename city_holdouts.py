@@ -108,7 +108,7 @@ if __name__ == '__main__':
     print("")
     clean_mail_file_df = args.mail_file.replace("\\","")
     mail_file_df = pd.read_csv(clean_mail_file_df, low_memory=False)
-    misc_df = pd.read_pickle("citiesHoldout_marketID_2022-05-18.pkl")
+    misc_df = pd.read_pickle("citiesHoldout_marketID_2022-06-06.pkl")
     holdout_df = pd.read_pickle("citiesHoldout_summary_2022-04-27.pkl")
 
     holdout_files = get_unique_file_names(mail_file_df, misc_df, holdout_df)
